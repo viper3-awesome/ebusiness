@@ -1,0 +1,36 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mvn spring-boot:run -DskipTests)",
+      "Bash(npm run *)",
+      "Bash(netstat -ano)",
+      "Bash(tasklist)",
+      "Bash(taskkill *)",
+      "Bash(cmd *)",
+      "Bash(mvn spring-boot:run)",
+      "Bash(mvn clean *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8443/eBusiness)",
+      "Read(//c/Users/viper/AppData/Local/Temp/claude/d--web---ebusiness/f0a88e26-abd4-42e9-bd70-61523d9f10bb/tasks/**)",
+      "Bash(curl -s http://localhost:8443/eBusiness/api/admin/goods/getAdvGoods -X POST -H \"Content-Type: application/json\" -d \"{}\")",
+      "Bash(curl -s http://localhost:8443/eBusiness/api/admin/goods/getGoodsIndex -X POST -H \"Content-Type: application/json\" -d \"{}\")",
+      "Bash(mysql -u root -p123456 -e \"DESCRIBE ch16.goodstable;\")",
+      "Bash(\"D:/Program Files/MySQL/MySQL Server 8.0/bin/mysql\" -u root -p123456 -e \"DESCRIBE ch16.goodstable;\")",
+      "Read(//c//**)",
+      "Bash(awk '{print $5}')",
+      "Bash(xargs -I{} taskkill //PID {} //F)",
+      "Bash(grep -v \"^--$\")",
+      "Bash(grep -v \"^Hibernate:$\")",
+      "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(f' 返回商品数: {len\\(d[\\\\\"result\\\\\"]\\)}'\\)\")",
+      "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(f' 广告商品数: {len\\(d[\\\\\"result\\\\\"]\\)}'\\)\")",
+      "Bash(curl -s http://localhost:8443/eBusiness/api/admin/goods/getGoods -X POST -H \"Content-Type: application/json\" -H \"Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjb21fY2hlbmhlbmciLCJleHAiOjE3NDYxMDg4MDAsImlhdCI6MTc0NjEwNTAwMCwibmJmIjoxNzQ2MTA1MDAwLCJ1c2VyTmFtZSI6ImFkbWluIn0.test\" -d \"{\\\\\"currentPage\\\\\":1,\\\\\"pageSize\\\\\":5}\")",
+      "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(f' status: {d.get\\(\\\\\"statusCode\\\\\",\\\\\"N/A\\\\\"\\)}'\\)\")",
+      "Bash(curl -s http://localhost:8443/eBusiness/api/admin/type/getAllGoodsType -X POST -H \"Content-Type: application/json\" -d \"{}\")",
+      "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(f' 类型数: {len\\(d[\\\\\"result\\\\\"]\\)}'\\)\")",
+      "Bash(curl -s http://localhost:8443/eBusiness/api/admin/goods/getGoodsById -X POST -H \"Content-Type: application/json\" -d \"{\\\\\"id\\\\\":1}\")",
+      "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); g=d['result']; print\\(f' 商品: {g[\\\\\"gname\\\\\"]}, 价格: {g[\\\\\"grprice\\\\\"]}'\\)\")",
+      "Bash(node -e \"const p=require\\('./package.json'\\); console.log\\(JSON.stringify\\({name:p.name,scripts:p.scripts,dependencies:Object.keys\\(p.devDependencies||{}\\).slice\\(0,10\\)},null,2\\)\\)\")"
+    ],
+    "defaultMode": "acceptEdits"
+  }
+}
